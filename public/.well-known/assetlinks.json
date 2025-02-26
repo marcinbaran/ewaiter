@@ -1,0 +1,12 @@
+[
+    {
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.primebitstudio.virtualwaiter",
+            "sha256_cert_fingerprints": [
+                "1A:5C:5F:E7:30:8F:0F:AF:78:A3:09:77:B8:BD:D7:06:5A:39:B8:DC:70:7E:3D:D2:98:1E:39:2E:0D:8B:3E:04"
+            ]
+        }
+    }
+]

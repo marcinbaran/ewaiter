@@ -1,0 +1,16 @@
+.scrollabe-icon-arrow-actual-orders {
+    animation: bounce 1s infinite;
+}
+.scrollabe-icon-arrow-new-orders {
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(-25%) translateX(-50%);
+    }
+    50% {
+        transform: translateY(0) translateX(-50%);
+    }
+}

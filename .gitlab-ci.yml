@@ -1,0 +1,42 @@
+image: php
+
+stages:
+    - build
+    - deploy_development
+    - deploy_staging
+    - deploy_production
+
+before_script:
+    - "which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y && apt-get install sshpass -y )"
+    - apt-get update -y
+    - apt-get install sshpass -y
+    - mkdir -p ~/.ssh
+    - eval $(ssh-agent -s)
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+
+deploy_development:
+    stage: deploy_development
+    environment:
+        name: development
+    only:
+        - develop
+    script:
+        - sshpass -p "$SSH_DEV_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_DEV_USER@$SSH_DEV_HOST -p$SSH_DEV_PORT  "cd $SSH_DEV_PATH && bash -s < bin/dev_update.sh"
+
+deploy_staging:
+    stage: deploy_staging
+    environment:
+        name: staging
+    only:
+        - stage
+    script:
+        - sshpass -p "$SSH_STAGE_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_STAGE_USER@$SSH_STAGE_HOST -p$SSH_STAGE_PORT  "cd $SSH_STAGE_PATH && bash -s < bin/stage_update.sh"
+
+deploy_production:
+    stage: deploy_production
+    environment:
+        name: production
+    only:
+        - main
+    script:
+        - sshpass -p "$SSH_PROD_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_PROD_USER@$SSH_PROD_HOST -p$SSH_PROD_PORT  "cd $SSH_PROD_PATH && bash -s < bin/prod_update.sh"

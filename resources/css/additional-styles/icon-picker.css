@@ -1,0 +1,84 @@
+.icon-picker {
+    @apply relative h-11 aspect-square;
+}
+
+.icon-picker--backdrop {
+    @apply hidden fixed inset-0 z-40;
+}
+
+body:has(.icon-picker--selector.active) > .icon-picker--backdrop {
+    @apply block;
+}
+
+.icon-picker--interface {
+    @apply overflow-hidden w-full h-full flex justify-center rounded-lg border border-gray-300 dark:border-gray-700 text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-500;
+}
+
+.icon-picker:has(.icon-picker--selector.active) > .icon-picker--interface {
+    @apply ring-2 ring-primary-900 dark:ring-primary-700;
+}
+
+.icon-picker--chosen-icon {
+    @apply p-1 basis-10 relative cursor-pointer;
+}
+
+.icon-picker--chosen-icon > img {
+    @apply block h-full aspect-square filter brightness-0 dark:invert;
+}
+
+.icon-picker--selector {
+    transform: translateY(calc(100% + 0.5rem));
+    @apply w-72 h-28 hidden absolute z-50 bottom-0 right-0 p-2 overflow-x-hidden rounded-lg border border-gray-300 dark:border-gray-700 text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-500;
+}
+
+.icon-picker--selector.active {
+    @apply block ring-2 ring-primary-900 dark:ring-primary-700;
+}
+
+.icon-picker--icons {
+    @apply w-full h-full grid grid-cols-6 auto-rows-min gap-2 justify-between overflow-y-auto;
+}
+
+.icon-picker--icon {
+    @apply relative aspect-square overflow-hidden p-1 cursor-pointer rounded-lg filter brightness-0 dark:invert;
+}
+
+.icon-picker--icon:hover {
+    box-shadow: 0 0 0 1px var(--grey);
+}
+
+.icon-picker--icon:has(input[type="radio"]:checked) {
+    border: 1px solid red;
+}
+
+.icon-picker--icon > input[type="radio"] {
+    @apply absolute top-0 left-0 opacity-0;
+}
+
+.icon-picker--icon > img {
+    @apply absolute top-1/2 left-1/2 h-3/4 aspect-square -translate-x-1/2 -translate-y-1/2;
+}
+
+@media (min-width: 640px) {
+    .icon-picker--selector {
+        @apply w-96;
+    }
+}
+
+@media (min-height: 640px) {
+    .icon-picker--selector {
+        @apply h-52;
+    }
+}
+
+@media (min-height: 720px) {
+    .icon-picker--selector {
+        @apply h-72;
+    }
+}
+
+@media (min-height: 820px) {
+    .icon-picker--selector {
+        @apply h-auto aspect-square;
+    }
+}

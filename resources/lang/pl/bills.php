@@ -1,0 +1,36 @@
+<?php
+
+return [
+    'Order ID' => 'Nr zamówienia',
+    'CreatedAt' => 'Utworzono w',
+    'Paid' => 'Płatny',
+    'Status' => 'Status',
+    'New' => 'Nowe',
+    'Accepted' => 'Zaakceptowane',
+    'Ready' => 'Gotowy',
+    'Released' => 'Wydany',
+    'Canceled' => 'Anulowano',
+    'Canceled automaticaly' => 'Niestety z przyczyn niezależnych od E-waiter nie możemy zrealizować Twojego zamówienia. Skontaktuj się bezpośrednio z restauracją.',
+    'Final price' => 'Cena sumaryczna',
+    'Changes successfully saved' => 'Zmiany zostały zapisane!',
+    'Something went wrong' => 'Coś poszło nie tak!',
+    'Payment details' => 'Szczegóły płatności',
+    'Payment date' => 'Data płatności',
+    'Payment method' => 'Metoda płatności',
+    'Payment status' => 'Status płatności',
+    'Payment amount' => 'Kwota płatności',
+    'Tip' => 'Napiwek',
+    'order_table' => [
+        'name' => 'Nazwa',
+        'quantity' => 'Ilość',
+        'dish_price' => 'Cena dania',
+        'additions_price' => 'Cena dodatków',
+        'final_price' => 'Cena sumaryczna',
+    ],
+    'delivery_method' => [
+        'delivery_address' => 'Dostawa pod adres',
+        'delivery_table' => 'Dostawa do stolika',
+        'delivery_room' => 'Dostawa do pokoju',
+        'delivery_personal_pickup' => 'Odbiór osobisty',
+    ],
+];

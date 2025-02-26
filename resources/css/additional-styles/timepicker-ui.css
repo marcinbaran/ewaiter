@@ -1,0 +1,125 @@
+.timepicker-ui-modal .timepicker-ui-wrapper {
+    @apply border bg-gray-100 border-gray-300;
+}
+
+html.dark .timepicker-ui-modal .timepicker-ui-wrapper {
+    @apply bg-gray-800 border-gray-700;
+}
+
+.timepicker-ui-modal .timepicker-ui-select-time,
+.timepicker-ui-modal .timepicker-ui-dots {
+    @apply text-gray-900;
+}
+
+html.dark .timepicker-ui-modal .timepicker-ui-select-time,
+html.dark .timepicker-ui-modal .timepicker-ui-dots {
+    @apply text-gray-400;
+}
+
+.timepicker-ui-modal input {
+    @apply transition-none;
+}
+
+.timepicker-ui-modal input[type="number"]:focus {
+    @apply ring-primary-900 border-primary-900;
+}
+
+html.dark .timepicker-ui-modal input[type="number"]:focus {
+    @apply ring-primary-700 border-primary-700;
+}
+
+.timepicker-ui-modal input.timepicker-ui-hour,
+.timepicker-ui-modal input.timepicker-ui-minutes {
+    @apply transition-none;
+}
+
+.timepicker-ui-modal input.timepicker-ui-hour,
+.timepicker-ui-modal input.timepicker-ui-minutes,
+.timepicker-ui-modal .timepicker-ui-clock-face {
+    @apply bg-gray-200 border border-gray-300;
+}
+
+html.dark .timepicker-ui-modal input.timepicker-ui-hour,
+html.dark .timepicker-ui-modal input.timepicker-ui-minutes,
+html.dark .timepicker-ui-modal .timepicker-ui-clock-face {
+    @apply bg-gray-700 border-gray-600;
+}
+
+.timepicker-ui-modal input.timepicker-ui-hour.active,
+.timepicker-ui-modal input.timepicker-ui-hour:hover,
+.timepicker-ui-modal input.timepicker-ui-minutes.active,
+.timepicker-ui-modal input.timepicker-ui-minutes:hover {
+    @apply border-none outline-none ring-2 text-gray-900 ring-primary-900;
+}
+
+html.dark .timepicker-ui-modal input.timepicker-ui-hour.active,
+html.dark .timepicker-ui-modal input.timepicker-ui-hour:hover,
+html.dark .timepicker-ui-modal input.timepicker-ui-minutes.active,
+html.dark .timepicker-ui-modal input.timepicker-ui-minutes:hover {
+    @apply text-gray-50 ring-primary-700;
+}
+
+html.dark .timepicker-ui-modal input.timepicker-ui-hour,
+html.dark .timepicker-ui-modal input.timepicker-ui-minutes,
+html.dark .timepicker-ui-modal .timepicker-ui-hour-time-12,
+html.dark .timepicker-ui-modal .timepicker-ui-value-tips-24h {
+    @apply text-gray-50;
+}
+
+.timepicker-ui-modal .timepicker-ui-dot,
+.timepicker-ui-modal .timepicker-ui-clock-hand,
+.timepicker-ui-modal .timepicker-ui-circle-hand {
+    @apply bg-primary-900;
+}
+
+html.dark .timepicker-ui-modal .timepicker-ui-dot,
+html.dark .timepicker-ui-modal .timepicker-ui-clock-hand,
+html.dark .timepicker-ui-modal .timepicker-ui-circle-hand {
+    @apply bg-primary-700;
+}
+
+html.dark .timepicker-ui-modal .timepicker-ui-value-tips.active,
+html.dark .timepicker-ui-modal .timepicker-ui-value-tips-24h.active {
+    @apply text-gray-900;
+}
+
+.timepicker-ui-modal .timepicker-ui-ok-btn {
+    @apply w-auto text-sm font-medium rounded-lg text-white px-5 py-2.5 bg-primary-900 mr-2 transition-none;
+}
+
+.timepicker-ui-modal .timepicker-ui-cancel-btn {
+    @apply w-auto text-sm font-medium rounded-lg text-white px-5 py-2.5 bg-gray-700 mr-2 transition-none;
+}
+
+html.dark .timepicker-ui-modal .timepicker-ui-cancel-btn {
+    @apply bg-gray-600;
+}
+
+.timepicker-ui-modal .timepicker-ui-ok-btn:hover,
+html.dark .timepicker-ui-modal .timepicker-ui-ok-btn:hover {
+    @apply bg-primary-800 underline;
+}
+
+.timepicker-ui-modal .timepicker-ui-cancel-btn:hover {
+    @apply bg-gray-800 underline;
+}
+
+html.dark .timepicker-ui-modal .timepicker-ui-cancel-btn:hover {
+    @apply bg-gray-700;
+}
+
+.timepicker-ui-modal .timepicker-ui-ok-btn:focus,
+html.dark .timepicker-ui-modal .timepicker-ui-ok-btn:focus,
+.timepicker-ui-modal .timepicker-ui-cancel-btn:focus,
+html.dark .timepicker-ui-modal .timepicker-ui-cancel-btn:focus {
+    @apply ring-0;
+}
+
+.timepicker-ui-modal .timepicker-ui-wrapper-btn,
+html.dark .timepicker-ui-modal .timepicker-ui-wrapper-btn {
+    @apply mt-3 static;
+}
+
+input[type="time"] {
+    color-scheme: dark;
+}

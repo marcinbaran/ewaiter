@@ -1,0 +1,31 @@
+@import "./variables.css";
+@import "./additional-styles/tailwind-select2.css";
+@import "./additional-styles/timepicker-ui.css";
+@import "./additional-styles/toast.css";
+@import "./additional-styles/datatables.css";
+@import "./additional-styles/filepond.css";
+@import "./additional-styles/flatpickr.css";
+@import "./additional-styles/loader.css";
+@import "./additional-styles/settings.css";
+@import "./additional-styles/bill-status.css";
+@import "./additional-styles/orders.css";
+@import "./additional-styles/datepicker.css";
+@import "./additional-styles/icon-picker.css";
+@import "additional-styles/product.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none;
+}
+
+body {
+    overflow: hidden;
+}
+
+::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}

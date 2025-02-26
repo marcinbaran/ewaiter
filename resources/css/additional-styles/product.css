@@ -1,0 +1,9 @@
+.product {
+    display: grid;
+    grid-template-columns: 0.6fr 1fr;
+    grid-template-rows: 0.6fr 0.2fr;
+}
+
+.calc-width {
+    width: calc(100% + 2.25rem);
+}

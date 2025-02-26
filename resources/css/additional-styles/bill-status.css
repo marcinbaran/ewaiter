@@ -1,0 +1,49 @@
+.status-bar {
+    position: absolute;
+    width: 100%;
+    left: -50%;
+    animation: status-bar-animation 1s infinite;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+    border-radius: 2rem;
+}
+
+@keyframes status-bar-animation {
+    from {
+        width: 40%;
+        left: -25%;
+        background: rgb(0, 0, 255);
+        background: linear-gradient(
+            90deg,
+            rgba(54, 122, 185, 1) 100%,
+            rgba(0, 0, 255, 1) 0%
+        );
+    }
+    to {
+        width: 40%;
+        left: 100%;
+        background: rgb(0, 0, 255);
+        background: linear-gradient(
+            90deg,
+            rgba(54, 122, 185, 1) 100%,
+            rgba(0, 0, 255, 1) 0%
+        );
+    }
+}
+
+.bill-status-grid-horizontal {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin-top: 1rem;
+}
+
+.bill-status-grid-vertical {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    margin-top: 1rem;
+}

@@ -1,0 +1,15 @@
+.filepond--root {
+    @apply border rounded-lg text-gray-600 bg-gray-200 border-gray-300 dark:text-gray-400 dark:bg-gray-800 dark:border-gray-700;
+}
+
+.filepond--panel-root {
+    @apply bg-transparent;
+}
+
+.filepond--drop-label {
+    @apply text-gray-600 dark:text-gray-400;
+}
+
+.filepond--credits {
+    @apply hidden;
+}

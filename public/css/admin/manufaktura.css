@@ -1,0 +1,105 @@
+body {
+    font-family: "Zilla Slab", serif;
+}
+
+.table td,
+.table th,
+.table thead th {
+    border-color: #b28564;
+    vertical-align: middle;
+}
+
+tbody th {
+    border-color: #b28564;
+}
+
+tbody tr:hover {
+    background-color: rgba(178, 133, 100, 0.2);
+}
+
+dl dt {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+}
+
+dl dt span {
+    max-width: 100%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+dl dt:not(.no-line)::after {
+    content: "";
+    z-index: 1;
+    margin-left: 30px;
+    display: block;
+    flex-shrink: 1;
+    width: 100%;
+    height: 18px;
+    border-bottom: 1px solid #b28564;
+}
+dl dd {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    align-items: flex-end;
+}
+dl dt.no-line {
+    margin-bottom: 8px;
+}
+dl dt.no-line ~ dd .media-body > h5 {
+    text-transform: uppercase;
+    font-weight: 600 !important;
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+.ew-preview {
+    max-height: 89%;
+    min-height: 200px;
+}
+@media (max-width: 992px) {
+    .promotion-medias .media-box {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .promotion-medias .media-box.global .media .img img {
+        width: 100%;
+    }
+}
+@media (min-width: 992px) {
+    .promotion-medias .media-box ~ .media-box {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+.promotion-medias .media-box .media {
+    width: 100%;
+    align-items: center;
+    border: 1px solid #ddd;
+}
+.promotion-medias .media-box .media .media-body {
+    padding: 0.5rem;
+}
+.promotion-medias .media-box.global .media {
+    height: 100%;
+}
+.promotion-medias .media-box.global .media .img {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+.promotion-medias .media-box.global .media .img img {
+    height: 100%;
+}
+.promotion-medias .media-box .media:nth-of-type(2) {
+    flex-direction: row-reverse;
+}
+.promotion-medias .media-box:not(.global) .media .img {
+    width: 50%;
+}
+.promotion-medias .media-box:not(.global) .media .img img {
+    width: 100%;
+}

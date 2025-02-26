@@ -1,0 +1,16 @@
+@media screen and (max-width: 768px) {
+    .active-menu {
+        transform: translateY(3.5rem) translateX(50%) !important;
+        animation: fadeIn 0.3s ease-in-out;
+        transition: opacity 0.1s ease-in-out;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
